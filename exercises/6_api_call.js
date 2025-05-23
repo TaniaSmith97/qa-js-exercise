@@ -2,11 +2,9 @@ const exercise6 = () => {
   console.log("===Exercise 6===");
 
   // Please Complete Exercise 6 here
-  // could not test the API due to the fetch import not working
   //Fetched users from https://jsonplaceholder.typicode.com/users.
   //Fetched posts from https://jsonplaceholder.typicode.com/posts.
   // declared base urls in 9 and 10
-  const fetch = require("node-fetch");
   const usersUrl = "https://jsonplaceholder.typicode.com/users";
   const postsUrl = "https://jsonplaceholder.typicode.com/posts";
 
@@ -40,7 +38,7 @@ const exercise6 = () => {
       })
       .then((data) => {
         data.forEach((posts) => {
-          console.log(`Post: ${posts.tite}`);
+          console.log(`Post: ${posts.title}`);
         });
 
         //Count how many posts contain the word "qui" in the title.
@@ -62,4 +60,4 @@ const exercise6 = () => {
   console.log("Exercise 6 completed");
 };
 
-module.exports = exercise6;
+export default exercise6;
